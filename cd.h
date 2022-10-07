@@ -7,17 +7,16 @@ using std::string;
 using std::vector;
 
 class Cd {
+public:
 
   Cd( );
   Cd( const Cd & );
   ~Cd( );
 
-public:
   string getCdName( );
   void setCdName( const string );
   void insertContent( string );
   void printContentList( );
-  void setListSize( int );
   void setContentNameSize( int );
 
 private:
@@ -25,7 +24,6 @@ private:
   string contentName;
   vector <string> contentList;
   int *listPtr;
-  int *contentNamePtr;
   void listSizeChange(int);
 
   static int listSize;
